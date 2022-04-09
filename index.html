@@ -1,0 +1,239 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><script type="text/javascript" src="./b4w.simple.min.js?v=09042022070043"></script><meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width"><style>
+body  {
+  background-image: url("./assets/textures/noithat.jpg");
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  
+}
+</style><style>
+.btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+ 
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+</style><style> 
+ 
+#DIV1 {
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  width: 100%;
+  height: 50%;
+  
+  border: 1px solid black;
+  z-index: 1;
+  display: none;
+}
+
+#DIV2 {
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  width: 100%;
+  height: 50%;
+  border: 1px solid black;
+  
+  display: none;
+}
+#DIV3 {
+ position: absolute;
+  top: 100px;
+  left: 0px;
+  width: 100%;
+  height: 50%;
+  border: 1px solid black;
+  
+  display: none;
+}
+#DIV4 {
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  width: 100%;
+  height: 50%;
+  border: 1px solid black;
+  
+  display: none;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; 
+  float: left; 
+}
+
+.button1 {background-color: #4CAF50;padding: 14px 16px;display: none;} /* Green */
+.button2 {background-color: #008CBA;padding: 14px 16px;display: none;} /* Blue */
+.button3 {background-color: #ff3333;padding: 14px 16px;display: none;} /* red */
+.button4 {background-color: #e67300;padding: 14px 16px;display: none;} /* orange */
+.button-them1 {background-color: #e67300;position: absolute;top: 30px;left: 30px;display: block;} 
+.button-them2 {background-color: #e67300;position: absolute;top: 30px;left: 30px;display: none;} 
+.button-them3 {background-color: #e67300;position: absolute;top: 30px;left: 30px;display: none;} 
+.button-them4 {background-color: #e67300;position: absolute;top: 30px;left: 30px;display: none;} 
+.button-close1 {background-color: #e67300;position: absolute;top: 30px;left: 120px;display: none;}
+.button-close2 {background-color: #e67300;position: absolute;top: 30px;left: 120px;display: none;}
+.button-close3 {background-color: #e67300;position: absolute;top: 30px;left: 120px;display: none;}
+.button-close4 {background-color: #e67300;position: absolute;top: 30px;left: 120px;display: none;}
+
+</style></head><body><div class="btn-group" style="position:absolute; bottom:0px;"><button  id="nut1" class="button1"  onclick="myFunction1()">Try it</button><button  id="nut2" class="button2"  onclick="myFunction2()">Try it 2</button><button  id="nut3" class="button3"  onclick="myFunction3()">Try it 3</button><button  id="nut4" class="button4"  onclick="myFunction4()">Try it 4</button></div><button id="nutthem1" class="button button-them1" onclick="themvao1()">them1</button><button id="nutthem2" class="button button-them2" onclick="themvao2()">them2</button><button id="nutthem3" class="button button-them3" onclick="themvao3()">them3</button><button id="nutthem4" class="button button-them4" onclick="themvao4()">them4</button><button id="nutclose1" class="button button-close1"  onclick="close1()">dong1</button><button id="nutclose2" class="button button-close2"  onclick="close2()">dong2</button><button id="nutclose3" class="button button-close3"  onclick="close3()">dong3</button><button id="nutclose4" class="button button-close4"  onclick="close4()">dong4</button><div id="DIV1"><iframe src="./khuhoiboi.html" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" scrolling="no" allowfullscreen></iframe></div><div id="DIV2"><iframe src="./02/02.html" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" scrolling="no" allowfullscreen></iframe></div><div id="DIV3"><iframe src="./khuchungcudem/khuchungcudem.html" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" scrolling="no" allowfullscreen></iframe></div><div id="DIV4"><iframe src="./iptest/iptest.html" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" scrolling="no" allowfullscreen></iframe></div><script>
+var top_z = document.getElementById("DIV1").style.zIndex;
+
+function themvao1() {
+  document.getElementById("nut1").style.display = "block";
+  document.getElementById("DIV1").style.zIndex = ++top_z;
+  document.getElementById("DIV1").style.display = "block";
+  document.getElementById("nutthem1").style.display = "none";
+  document.getElementById("nutthem2").style.display = "block";
+  document.getElementById("nutclose1").style.display = "block";
+}
+function myFunction1() { 
+  document.getElementById("DIV1").style.zIndex = ++top_z;
+  document.getElementById("DIV1").style.display = "visible";
+  document.getElementById("nutthem1").style.display = "none";
+  document.getElementById("nutthem2").style.display = "block";
+  document.getElementById("nutthem3").style.display = "none";
+  document.getElementById("nutthem4").style.display = "none";
+  document.getElementById("nutclose1").style.display = "block";
+  document.getElementById("nutclose2").style.display = "none";
+  document.getElementById("nutclose3").style.display = "none";
+  document.getElementById("nutclose4").style.display = "none";
+}
+
+function themvao2() {
+  document.getElementById("nut2").style.display = "block";
+  document.getElementById("DIV2").style.zIndex = ++top_z;
+  document.getElementById("DIV2").style.display = "block";
+  document.getElementById("nutthem2").style.display = "none";
+  document.getElementById("nutthem3").style.display = "block";
+  document.getElementById("nutclose2").style.display = "block";
+}
+
+function myFunction2() {
+ 
+  document.getElementById("DIV2").style.zIndex = ++top_z;
+  document.getElementById("DIV2").style.display = "block";
+  document.getElementById("nutthem1").style.display = "none";
+  document.getElementById("nutthem2").style.display = "none";
+  document.getElementById("nutthem3").style.display = "block";
+  document.getElementById("nutthem4").style.display = "none";
+  document.getElementById("nutclose1").style.display = "none";
+  document.getElementById("nutclose2").style.display = "block";
+  document.getElementById("nutclose3").style.display = "none";
+  document.getElementById("nutclose4").style.display = "none";
+}
+
+function themvao3() {
+  document.getElementById("nut3").style.display = "block";
+  document.getElementById("DIV3").style.zIndex = ++top_z;
+  document.getElementById("DIV3").style.display = "block";
+  document.getElementById("nutthem3").style.display = "none";
+  document.getElementById("nutthem4").style.display = "block";
+  document.getElementById("nutclose3").style.display = "block";
+}
+
+function myFunction3() {
+ 
+  document.getElementById("DIV3").style.zIndex = ++top_z;
+  document.getElementById("DIV3").style.display = "block";
+  document.getElementById("nutthem1").style.display = "none";
+  document.getElementById("nutthem2").style.display = "none";
+  document.getElementById("nutthem3").style.display = "none";
+  document.getElementById("nutthem4").style.display = "block";
+  document.getElementById("nutclose1").style.display = "none";
+  document.getElementById("nutclose2").style.display = "none";
+  document.getElementById("nutclose3").style.display = "block";
+  document.getElementById("nutclose4").style.display = "none";
+}
+
+function themvao4() {
+  document.getElementById("nut4").style.display = "block";
+  document.getElementById("DIV4").style.zIndex = ++top_z;
+  document.getElementById("DIV4").style.display = "block";
+  document.getElementById("nutclose4").style.display = "block";
+}
+function myFunction4() {
+ 
+  document.getElementById("DIV4").style.zIndex = ++top_z;
+  document.getElementById("DIV4").style.display = "block";
+  document.getElementById("nutthem1").style.display = "block";
+  document.getElementById("nutthem2").style.display = "none";
+  document.getElementById("nutthem3").style.display = "none";
+  document.getElementById("nutthem4").style.display = "none";
+  document.getElementById("nutclose1").style.display = "none";
+  document.getElementById("nutclose2").style.display = "none";
+  document.getElementById("nutclose3").style.display = "none";
+  document.getElementById("nutclose4").style.display = "block";
+}
+
+function close1() {
+   /*document.getElementById("DIV1").style.zIndex = --top_z;*/
+  document.getElementById("DIV1").style.display = "none";
+  document.getElementById("nut1").style.display = "none";
+  document.getElementById("nutthem1").style.display = "block";
+  document.getElementById("nutthem2").style.display = "none";
+  document.getElementById("nutthem3").style.display = "none";
+  document.getElementById("nutthem4").style.display = "none";
+  document.getElementById("nutclose1").style.display = "none";
+}
+
+function close2() {
+   /*document.getElementById("DIV2").style.zIndex = --top_z;*/
+  document.getElementById("DIV2").style.display = "none";
+  document.getElementById("nut2").style.display = "none";
+  document.getElementById("nutthem1").style.display = "none";
+  document.getElementById("nutthem2").style.display = "block";
+  document.getElementById("nutthem3").style.display = "none";
+  document.getElementById("nutthem4").style.display = "none";
+  document.getElementById("nutclose2").style.display = "none";
+}
+
+function close3() {
+   /*document.getElementById("DIV3").style.zIndex = --top_z;*/
+  document.getElementById("DIV3").style.display = "none";
+  document.getElementById("nut3").style.display = "none";
+  document.getElementById("nutthem1").style.display = "none";
+  document.getElementById("nutthem2").style.display = "none";
+  document.getElementById("nutthem3").style.display = "block";
+  document.getElementById("nutthem4").style.display = "none";
+  document.getElementById("nutclose3").style.display = "none";
+}
+
+function close4() {
+   /*document.getElementById("DIV4").style.zIndex = --top_z;*/
+  document.getElementById("DIV4").style.display = "none";
+  document.getElementById("nut4").style.display = "none";
+  document.getElementById("nutthem1").style.display = "none";
+  document.getElementById("nutthem2").style.display = "none";
+  document.getElementById("nutthem3").style.display = "none";
+  document.getElementById("nutthem4").style.display = "block";
+  document.getElementById("nutclose4").style.display = "none";
+}
+</script></body></html>
